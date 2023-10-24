@@ -62,30 +62,36 @@ ul {
   position: absolute;
   font-size: 14px;
   left: -20px;
-  top: -41px;
+  top: -20px;
   text-align: center;
   padding: 10px;
   line-height: 0.7;
   border-radius: 5px;
   color: white;
-  display: none;
+  opacity: 0;
   transition: var(--main-transition);
 }
 .header-top2 .social .social-icon::before {
   content: "";
   position: absolute;
   left: -50%;
-  top: -11px;
+  top: 10px;
   transform: translateX(30px);
   border: 5px solid;
-  display: none;
+  opacity: 0;
   transition: var(--main-transition);
 }
 .header-top2 .social .social-icon:hover,
 .header-top2 .social .social-icon:hover::after,
 .header-top2 .social .social-icon:hover::before {
   color: white;
-  display: block;
+  opacity: 1;
+}
+.header-top2 .social .social-icon:hover::after {
+  top: -41px;
+}
+.header-top2 .social .social-icon:hover::before {
+  top: -11px;
 }
 .header-top2 .social .social-icon:hover.facebook::after {
   background-color: #1877f2;
@@ -158,7 +164,7 @@ ul {
   background-color: var(--second-color);
   right: -15px;
 }
-.header-top3 .cart-details  {
+.header-top3 .cart-details {
   width: 320px;
   bottom: -125px;
   border-top: 2px solid red;
@@ -167,7 +173,7 @@ ul {
 .header-top3 .myCartShopping:hover .cart-details {
   display: block !important;
 }
-.header-top3 .cart-details .button-details  {
+.header-top3 .cart-details .button-details {
   background: linear-gradient(to right, #50b49a, #108f6e);
   transition: var(--main-transition);
 }
@@ -176,3 +182,55 @@ ul {
 }
 
 /* End Header 3 */
+/* Start Landing-page */
+.landing-page {
+  min-height: 80vh;
+  background-image: url("../image/1.jpg");
+  background-size: cover;
+  /* animation: change-background 12s infinite; */
+}
+@keyframes change-background {
+  0%, 100% {
+    background-image: url("../image/1.jpg");
+  }
+  33% {
+    background-image: url("../image/2.jpg");
+  }
+  66% {
+    background-image: url("../image/3.jpg");
+  }
+}
+.landing-page .change-background {
+  color: #ddd;
+  z-index: 2;
+  cursor: pointer;
+}
+.landing-page .fa-angle-left {
+  left: 60px;
+  transition: 0.3s;
+}
+.landing-page .fa-angle-left:hover {
+  left: 55px;
+  color: var(--main-color);
+}
+.landing-page .fa-angle-right {
+  right: 60px;
+  transition: 0.3s;
+}
+.landing-page .fa-angle-right:hover {
+  right: 55px;
+  color: var(--main-color);
+}
+.landing-page .bullets-background {
+  bottom: 30px;
+  z-index: 2;
+}
+.landing-page .bullets-background li {
+  height: 20px;
+  width: 20px;
+}
+.landing-page .bullets-background li.active {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+/* End Landing-page */
