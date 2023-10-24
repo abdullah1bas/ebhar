@@ -1,0 +1,178 @@
+/* Start Global Rules */
+:root {
+  --main-color: #47af94;
+  --second-color: #303451;
+  --background-icon: #f2f3f8;
+  --main-transition: 0.3s;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* Start Header Top */
+.header-top {
+  background: linear-gradient(to right, #50b49a, #108f6e);
+}
+/* .head-search{
+
+} */
+.head-search .box {
+  padding: 6px;
+  background: var(--second-color);
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--main-transition);
+}
+.head-search .box:hover {
+  background-color: #ef586b;
+}
+/* End Header top */
+/* Start header 2 */
+.header-top2 .logo {
+  width: 170px;
+  height: 70px;
+}
+
+.header-top2 .social .social-icon {
+  background-color: var(--background-icon);
+  color: var(--second-color);
+  width: 35px;
+  height: 36px;
+  transition: var(--main-transition);
+}
+
+.header-top2 .social .social-icon::after {
+  content: attr(data-icon);
+  width: 80px;
+  height: 30px;
+  position: absolute;
+  font-size: 14px;
+  left: -20px;
+  top: -41px;
+  text-align: center;
+  padding: 10px;
+  line-height: 0.7;
+  border-radius: 5px;
+  color: white;
+  display: none;
+  transition: var(--main-transition);
+}
+.header-top2 .social .social-icon::before {
+  content: "";
+  position: absolute;
+  left: -50%;
+  top: -11px;
+  transform: translateX(30px);
+  border: 5px solid;
+  display: none;
+  transition: var(--main-transition);
+}
+.header-top2 .social .social-icon:hover,
+.header-top2 .social .social-icon:hover::after,
+.header-top2 .social .social-icon:hover::before {
+  color: white;
+  display: block;
+}
+.header-top2 .social .social-icon:hover.facebook::after {
+  background-color: #1877f2;
+}
+.header-top2 .social .social-icon:hover.facebook::before {
+  border-color: #1877f2 transparent transparent transparent;
+}
+.header-top2 .social .social-icon:hover.instagram::after {
+  background-color: #833ab4;
+}
+.header-top2 .social .social-icon:hover.instagram::before {
+  border-color: #833ab4 transparent transparent transparent;
+}
+.header-top2 .social .social-icon:hover.twitter::after {
+  background-color: #1da1f2;
+}
+.header-top2 .social .social-icon:hover.twitter::before {
+  border-color: #1da1f2 transparent transparent transparent;
+}
+.header-top2 .social .social-icon:hover.snapchat::after {
+  background-color: #fffc00;
+  color: black;
+}
+.header-top2 .social .social-icon:hover.snapchat::before {
+  border-color: #fffc00 transparent transparent transparent;
+}
+.header-top2 .social .social-icon:hover.facebook {
+  background-color: #1877f2;
+}
+.header-top2 .social .social-icon:hover.instagram {
+  background-color: #833ab4;
+}
+.header-top2 .social .social-icon:hover.twitter {
+  background-color: #1da1f2;
+}
+.header-top2 .social .social-icon:hover.snapchat {
+  background-color: #fffc00;
+  color: black;
+}
+
+/* End Header 2 */
+/* Start Header 3 */
+.header-top3 .link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  transition: var(--main-transition);
+}
+.header-top3 .link {
+  transition: var(--main-transition);
+}
+.header-top3 .link:hover {
+  color: red !important;
+}
+.header-top3 .link:hover::after {
+  width: 100%;
+}
+.header-top3 .myCartShopping .icon-cart {
+  background-color: var(--main-color);
+  width: 50px;
+  height: 50px;
+}
+.header-top3 .icon-cart .num-cart {
+  width: 25px;
+  height: 25px;
+  background-color: var(--second-color);
+  right: -15px;
+}
+.header-top3 .cart-details  {
+  width: 320px;
+  bottom: -125px;
+  border-top: 2px solid red;
+  background-color: var(--background-icon);
+}
+.header-top3 .myCartShopping:hover .cart-details {
+  display: block !important;
+}
+.header-top3 .cart-details .button-details  {
+  background: linear-gradient(to right, #50b49a, #108f6e);
+  transition: var(--main-transition);
+}
+.header-top3 .cart-details .button-details:hover {
+  background: red;
+}
+
+/* End Header 3 */
