@@ -30,7 +30,7 @@ function randomizeImgs() {
 }, 5000);
 
 }
-randomizeImgs();
+// randomizeImgs();
 
 // console.log(counter)
 

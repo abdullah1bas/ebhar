@@ -1,6 +1,7 @@
 /* Start Global Rules */
 :root {
   --main-color: #47af94;
+  --third-color: #ef586b;
   --second-color: #303451;
   --background-icon: #f2f3f8;
   --main-transition: 0.3s;
@@ -172,6 +173,7 @@ ul {
 }
 .header-top3 .myCartShopping:hover .cart-details {
   display: block !important;
+  z-index: 2;
 }
 .header-top3 .cart-details .button-details {
   background: linear-gradient(to right, #50b49a, #108f6e);
@@ -187,10 +189,11 @@ ul {
   min-height: 80vh;
   background-image: url("../image/1.jpg");
   background-size: cover;
-  /* animation: change-background 12s infinite; */
+  /* animation: change-background 15s infinite; */
 }
 @keyframes change-background {
-  0%, 100% {
+  0%,
+  100% {
     background-image: url("../image/1.jpg");
   }
   33% {
@@ -234,3 +237,59 @@ ul {
   border-color: var(--main-color);
 }
 /* End Landing-page */
+/* Start Event page */
+.event-page .title {
+  
+}
+.event-page .title::before {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 4px;
+  background-color: var(--third-color);
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.event-page .title::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 35px;
+  border-right: 8px solid;
+  border-left: 8px solid;
+  border-color: transparent #fff;
+  bottom: -15px;
+  left: 40%;
+  animation: title-animate 3s  infinite;
+}
+@keyframes title-animate {
+  0% {
+    transform: translateX(-60px);
+  } 100% {
+    transform: translateX(105px);
+  }
+}
+.event-page .title-event {
+  background-color: var(--background-icon);
+}
+.event-page .title-event div img {
+  width: 25px;
+  height: 25px;
+}
+.event-page .subtitle-event {
+  background-color: var(--third-color);
+  position: relative;
+}
+.event-page .subtitle-event::before {
+  content: '';
+  position: absolute;
+  border: 8px solid;
+  border-color: transparent transparent var(--third-color) transparent;
+  top: -15px;
+  left: 40%;
+}
+.event-page .subtitle-event .count-event {
+  background-color: var(--main-color);
+}
+/* End Event page */
